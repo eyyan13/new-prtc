@@ -674,3 +674,30 @@
         left: -2px;
     }
 }
+@media (max-width: 768px) {
+    /* Adjust navbar padding */
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    /* Ensure logos scale */
+    .navbar-brand img {
+        max-width: 100%;
+    }
+
+    /* Center-align text */
+    .text-center {
+        text-align: center !important;
+    }
+
+    /* Fix modal image sizing */
+    .modal img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust card padding */
+    .card-body {
+        padding: 1rem;
+    }
+}
