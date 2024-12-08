@@ -1,438 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PRTC-Gallery</title>
+    <meta charset="utf-8">
+    <title>PRTC - Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+/* Global Styles */
 
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+/* Container Styling */
+.containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
 
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="" name="keywords">
-<meta content="" name="description">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
-<!-- Favicon -->
-<link href="favicon.ico" rel="icon">
+/* Heading Styling */
+.containers .heading {
+  width: 50%;
+  padding-bottom: 50px;
+}
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+.containers .heading h3 {
+  font-size: 3.4em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #222;
+}
 
-<!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+.containers .heading h3 span {
+  font-weight: 100;
+}
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+/* Box Layout for Image Columns */
+.containers .box {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-between;
+  width: 100%;
+  margin: -10px; /* Adjust for added margins on children */
+}
+
+/* Dream Section Styling for Individual Columns */
+.containers .box .dream {
+  flex: 1 1 calc(33.33% - 20px); /* 3 columns layout with equal margins */
+  margin: 10px; /* Equal margin on all sides */
+}
+
+/* Image Styling */
+.containers .box .dream img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Margin below each image */
+  transition: transform 0.8s, filter 0.8s; /* Smooth transition for the effect */
+}
+
+/* Hover effect for images */
+.containers .box .dream img:hover {
+  filter: grayscale(1);             /* Convert image to grayscale */
+  transform: scale(1.01);           /* Slightly enlarge the image */
+}
+
+/* Button Styling */
+.containers .btn {
+  margin: 40px 0 70px 0;
+  background: #222;
+  padding: 15px 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+/* Responsive Design */
+
+/* Tablets (2 columns) */
+@media only screen and (max-width: 1024px) {
+  .containers .box .dream {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 columns with equal margins */
+  }
+
+  .containers .heading {
+    width: 100%; /* Full-width heading on smaller screens */
+  }
+  
+  .containers .heading h3 {
+    font-size: 2.2em; /* Adjust heading size for tablets */
+  }
+}
+
+/* Mobile (1 column) */
+@media only screen and (max-width: 640px) {
+  .containers .box {
+    flex-direction: column; /* Stack columns vertically */
+    margin: 0; /* Reset container margin for single column */
+  }
+
+  .containers .box .dream {
+    flex: 1 1 100%; /* Full width for single column */
+    margin: 10px 0; /* Vertical margin only */
+  }
+
+  .containers .heading {
+    width: 100%; /* Full-width heading */
+  }
+  
+  .containers .heading h3 {
+    font-size: 1.7em; /* Adjust heading size for mobile */
+  }
+}
+  </style>
 </head>
-<style>
-	body {
-  background-color:#1d1d1d;
-  font-family: "Asap", sans-serif;
-  color:#989898;
-  margin:10px;
-  font-size:16px;
-}
-
-#demo {
-  height:100%;
-  position:relative;
-  overflow:hidden;
-}
-
-
-.green{
-  background-color:#6fb936;
-}
-        .thumb{
-            margin-bottom: 30px;
-        }
-        
-        .page-top{
-            margin-top:85px;
-        }
-
-   
-img.zoom {
-    width: 100%;
-    height: 200px;
-    border-radius:5px;
-    object-fit:cover;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-}
-        
- 
-.transition {
-    -webkit-transform: scale(1.2); 
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
-    .modal-header {
-   
-     border-bottom: none;
-}
-    .modal-title {
-        color:#000;
-    }
-    .modal-footer{
-      display:none;  
-    }
-	body {
-  margin: 0;
-  font-family: arial;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #676666;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: courier new;
-  font-weight: bold;
-}
-
-.topnav a {
-  transition: transform 0.3s ease; /* Smooth zoom animation */
-}
-
-.topnav a:hover {
-  transform: scale(1.1); /* Zoom effect */
-}
-
-
-.topnav a.active {
-  background-color: #ff0000; /* Red background color */
-  color: white; /* White text color */
- 
-  border-radius: 3px; /* Optional: Adds rounded corners for a smoother look */
-}
-
-
-.topnav .icon {
-  display: none;
-}
-/* Scrollbar Styles */
-::-webkit-scrollbar-button:horizontal:decrement {
-    background-image: url('left-arrow.png'); /* Left button */
-    background-size: contain;
-  }
-  
-  ::-webkit-scrollbar-button:horizontal:increment {
-    background-image: url('right-arrow.png'); /* Right button */
-    background-size: contain;
-  }
-::-webkit-scrollbar{
-    width: 0.9rem;
-  }
-  
-  ::-webkit-scrollbar-track{
-    background-color: rgb(255, 255, 255);
-  }
-  
-  ::-webkit-scrollbar-thumb{
-    background-color: rgb(216, 19, 36);
-    background-clip: inherit;
-    height: 0.3rem;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover{
-    background-color:  rgb(231, 40, 56);
-    scroll-behavior: smooth;
-  }
-  
-  /* Horizontal Scrollbar */
-  ::-webkit-scrollbar:horizontal{
-    background: rgb(141, 141, 234);
-    width: 0.5rem;
-    height: 0.4rem;
-    scroll-behavior: smooth;
-  }
-  
-  /* Scrollbar Buttons */
-  ::-webkit-scrollbar-button {
-    background-color: rgb(255, 255, 255); /* Button color */
-    height: 18px; /* Button height */
-    width: 18px; /* Button width */
-  }
-  
-  ::-webkit-scrollbar-button:increment {
-    background-color:rgb(255, 255, 255)/* Button for down/right */
-  }
-  
-  ::-webkit-scrollbar-button:decrement {
-    background-color:rgb(255, 255, 255) /* Button for up/left */
-  }
-  
-  ::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url('/css/up.png'); /* Up button */
-    background-size: contain;
-  }
-  
-  ::-webkit-scrollbar-button:vertical:increment {
-    background-image: url('/css/down.png'); /* Down button */
-    background-size: contain;
-  }
-  
-  ::-webkit-scrollbar-button:horizontal:decrement {
-    background-image: url('path-to-left-arrow.png'); /* Left button */
-    background-size: contain;
-  }
-  
-  ::-webkit-scrollbar-button:horizontal:increment {
-    background-image: url('path-to-right-arrow.png'); /* Right button */
-    background-size: contain;
-  }
-/* Base styles for the navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: rgb(223, 222, 222);
-}
-
-.topnav a {
-  
-  display: inline-block;
-  color: rgb(31, 30, 30);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-
-
-/* Right-aligned links */
-.right-lnk {
-  float: right;
-}
-
-/* The hamburger icon */
-.icon {
-  display: none;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: none; /* Hide links by default on small screens */
-    text-align: left;
-  }
-  
-  .topnav a.icon {
-    float: center;
-    display: block; /* Show the hamburger icon */
-  }
-
-  .topnav.responsive a {
-    display: block; /* Show links when menu is toggled */
-  }
-}
-
-
-</style>
 <body>
-	
-	<div class="topnav" id="myTopnav">
-    <div class="logo">
-      <img src="PRTC Logo (EPS)-01-01 (2) (1).png" alt="Logo" style="width: 10rem; margin-right: -40%;">
+  <div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="container">
+                <div class="row justify-content-center align-items-center py-2">
+                    <!-- Align the items in a single row with flexbox -->
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="me-2">OFFICIAL IMPORTER AND DISTRIBUTOR OF</span>
+                        <img src="Bridgestone-Karachi-removebg-preview2.png" 
+                             alt="Bridgestone Logo" 
+                             style="width: 100px;" 
+                             class="mx-2">
+                        <span class="ms-2">IN PAKISTAN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div style="float: right; margin-top: -60px;">
-		<a href="index.html" >Home <i class="fa fa-home" aria-hidden="true"></i></a>
-		<a href="gallery.html" class="active"> Gallery <i class="fa fa-book"></i></a>
-		<a href="contact.html">Contact <i class="fa fa-envelope"></i></a>
-		<a href="about.html">About <i class="fa fa-user"></i></a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a></div> 
-	</div>
-
-    <!-- Page Content -->
-   <div class="container page-top">
-
-
-
-        <div class="row">
-
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
-                   
-                </a>
+</div>
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <!-- Limit the image height to ensure it doesn't push the navbar height -->
+        <img class="imgdec" src="PRTC Logo (EPS)-01-01 (2).jpg" alt="Logo" style="width: 10rem;">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="passengercarradial.html" class="dropdown-item">Passenger Car <br> Radial (PCR) </a>
+                    <a href="light.html" class="dropdown-item">Light Vehicle Radial <br> (4x4/SUV)</a>
+                    <a href="lightsec.html" class="dropdown-item">Light Vehicle Radial <br> (LVR/LSR)</a>
+                    <a href="tbr.html" class="dropdown-item">Truck And Bus (TBR/TBS)</a>
+                    <a href="industrial.html" class="dropdown-item">Industrial (IDS)</a>
+                    <a href="off.html" class="dropdown-item">Off the Road (OTR)</a>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"  class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid"  alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/158827/field-corn-air-frisch-158827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/1038914/pexels-photo-1038914.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/56005/fiji-beach-sand-palm-trees-56005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a href="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="fancybox" rel="ligthbox">
-                    <img  src="https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="zoom img-fluid "  alt="">
-                </a>
-            </div>
-            
-            
-           
-           
-       </div>
-
-     
-      
-
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
     </div>
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="container py-5">
-          <div class="row g-5">
-              <div class="col-lg-3 col-md-6">
-                  <h4 class="text-light mb-4">Address</h4>
-                  <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>79-C, PHASE II EXTENSION DHA, KARACHI-75500, PAKISTAN</p>
-                  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92-21-35804646 TO 51</p>
-                  <p class="mb-2" style="white-space: nowrap;"><i class="fa fa-envelope me-3"></i>INFO@BRIDGESTONE.NET.PK</p>
-                  <div class="d-flex pt-2">
-                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <h4 class="text-light mb-4">Opening Hours</h4>
-                  <h6 class="text-light">Monday - Thursday:</h6>
-                  <p class="mb-4">09:00 AM - 05:00 PM</p>
-                  <h6 class="text-light">Friday - Saturday:</h6>
-                  <p class="mb-0">09:00 AM - 1:00 PM</p>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  
-                  <a class="btn btn-link" href="">Home</a>
-                  <a class="btn btn-link" href="">About</a>
-                  <a class="btn btn-link" href="">Services</a>
-                  <a class="btn btn-link" href="">Pages</a>
-                  <a class="btn btn-link" href="">Contact</a>
-              </div>
-             <div>
-              <img src="img/PRTC.png" alt="logo" srcset="" style="float: right; margin-top: -34%; width: 32%;">
-             </div>
-              </div>
-          </div>
+</nav>
+  <div class="containers">
+    <div class="heading">
+      <h3>Responsive Photo <span>Gallery</span></h3>
+    </div>
+    <div class="box">
+      <div class="dream">
+        <img src="img/2.png" alt="Image 1">
+        <img src="img/about.jpg" alt="Image 2">
+        <img src="img/bridgestone-logo-2011-present-2048x1485.webp" alt="Image 3">
+        <img src="img/tyre3.png" alt="Image 4">
+        <img src="img/Untitled-3.jpg" alt="Image 5">
+        <img src="img/tyre1.png" alt="Image 6">      
       </div>
-      <div class="container">
-          <div class="copyright">
-              <div class="row">
-                  <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                      &copy; <a class="border-bottom" href="#">Pakistan Rubber & Tyre Company</a>, All Right Reserved.
-<br>
-                  
-                 
-              </div>
-          </div>
+
+      <div class="dream">
+        <img src="img/2.png" alt="Image 1">
+        <img src="img/about.jpg" alt="Image 2">
+        <img src="img/bridgestone-logo-2011-present-2048x1485.webp" alt="Image 3">
+        <img src="img/tyre3.png" alt="Image 4">
+        <img src="img/Untitled-3.jpg" alt="Image 5">
+        <img src="img/tyre1.png" alt="Image 6">   
       </div>
+
+      <div class="dream">
+        <img src="img/2.png" alt="Image 1">
+        <img src="img/about.jpg" alt="Image 2">
+        <img src="img/bridgestone-logo-2011-present-2048x1485.webp" alt="Image 3">
+        <img src="img/tyre3.png" alt="Image 4">
+        <img src="img/Untitled-3.jpg" alt="Image 5">
+        <img src="img/tyre1.png" alt="Image 6">   
+      </div>
+    </div>
   </div>
-  <!-- Footer End -->
-  <!-- Footer End -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>79-C, PHASE II EXTENSION DHA, KARACHI-75500, PAKISTAN</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92-21-35804646 TO 51</p>
+                <p class="mb-2" style="white-space: nowrap;"><i class="fa fa-envelope me-3"></i>INFO@BRIDGESTONE.NET.PK</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Opening Hours</h4>
+                <h6 class="text-light">Monday - Thursday:</h6>
+                <p class="mb-4">09:00 AM - 05:00 PM</p>
+                <h6 class="text-light">Friday - Saturday:</h6>
+                <p class="mb-0">09:00 AM - 1:00 PM</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                
+                <a class="btn btn-link" href="">Home</a>
+                <a class="btn btn-link" href="">About</a>
+              
+                <a class="btn btn-link" href="">Pages</a>
+                <a class="btn btn-link" href="">Contact</a>
+            </div>
+           <div>
+         <img src="img/PRTC.png" alt="logo" srcset="" style="float: right; margin-top: -32%;width: 32%;">
+           </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Pakistan Rubber & Tyre Company</a>, All Right Reserved.
+<br>
+                
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<!-- Footer End -->
 
 
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/tempusdominus/js/moment.min.js"></script>
-  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-      
- 
-
-<script>
-  function toggleMenu() {
-  const nav = document.getElementById("myTopnav");
-  if (nav.className === "topnav") {
-    nav.className += " responsive"; // Add the responsive class
-  } else {
-    nav.className = "topnav"; // Remove the responsive class
-  }
-}
-
-	$(document).ready(function(){
-  $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-    });
-    
-    $(".zoom").hover(function(){
-		
-		$(this).addClass('transition');
-	}, function(){
-        
-		$(this).removeClass('transition');
-	});
-});
-    
-</script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 </html>
